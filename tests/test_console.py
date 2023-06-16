@@ -12,7 +12,7 @@ class test_Console(unittest.TestCase):
     def test_pep8_compliance(self):
         """Runs styleguide against the module to ensure no errors exist"""
 
-        pep8styl = pep8.StyleGuide(quiet=True)
+        pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['console.py'])
         self.assertEqual(
             result.total_errors, 0, "Found code style errors (and warnings).")
