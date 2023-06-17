@@ -55,18 +55,3 @@ class FileStorage:
                         self.all()[key] = classes[val['__class__']](**val)
         except FileNotFoundError:
             pass
-
-    def delete(self, obj=None):
-        """Delete obj from __objects if it’s
-        inside - if obj is equal to None, the method should not do anything
-        """
-        if obj is not None:
-            del FileStorage.__objects[obj.to_dict()['__class__'] + '.' +
-                                      obj.id]
-            self.save()
-        else:
-            pass
-
-    def close(self):
-        """Deserializing the JSON file to objects"""
-        self.reload()
