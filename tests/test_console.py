@@ -1,17 +1,16 @@
 #!/usr/bin/python3
-
-"""Testing the console module for pep8 compliance."""
-
+"""
+Test File for Console
+"""
 import unittest
 import pep8
 
 
-class test_Console(unittest.TestCase):
-    """ This class tests the compliance of the console module."""
+class tests_Console(unittest.TestCase):
+    """Unittest"""
 
-    def test_pep8_compliance(self):
-        """Runs styleguide against the module to ensure no errors exist"""
-
+    def test_pep8_conformance(self):
+        """test pep8"""
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['console.py'])
         self.assertEqual(
